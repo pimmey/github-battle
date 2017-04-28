@@ -17,7 +17,7 @@ const getRepos = username => {
 };
 
 const getStarCount = repos => {
-  return repos.data.reduce((count, repo) => {
+  return repos.reduce((count, repo) => {
     return count + repo.stargazers_count;
   }, 0);
 };

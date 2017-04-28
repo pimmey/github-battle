@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import api from '../utils/api';
+import Loading from './Loading';
 
-const SelectLanguage = (props) => {
+const SelectLanguage = props => {
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
 
   return (
     <ul className="languages">
       {languages.map(lang => (
         <li
-          style={lang === props.selectedLanguage ? { color: 'coral'} : null}
+          style={lang === props.selectedLanguage ? { color: 'coral' } : null}
           onClick={props.onSelect.bind(null, lang)}
           key={lang}>
           {lang}
@@ -24,7 +25,7 @@ SelectLanguage.PropTypes = {
   onSelect: PropTypes.func.isRequired
 };
 
-const RepoGrid = (props) => {
+const RepoGrid = props => {
   return (
     <ul className="popular-list">
       {props.repos.map((repo, index) => (
@@ -86,7 +87,7 @@ export default class Popular extends React.Component {
         <SelectLanguage
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage} />
-        {!this.state.repos ? <p>Loading</p> : <RepoGrid repos={this.state.repos} />}
+        {!this.state.repos ? <Loading /> : <RepoGrid repos={this.state.repos} />}
       </div>
     );
   }
