@@ -19,6 +19,11 @@ export default () => {
           Popular
         </NavLink>
       </li>
+      <li>
+        <a href="https://github.com/pimmey/github-battle/" target="_blank">
+          GitHub
+        </a>
+      </li>
     </ul>
   )
 };
