@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import api from '../utils/api';
 import Loading from './Loading';
@@ -52,7 +52,7 @@ RepoGrid.PropTypes = {
   repos: PropTypes.array.isRequired
 };
 
-export default class Popular extends React.Component {
+export default class extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,9 +75,9 @@ export default class Popular extends React.Component {
 
     api.fetchPopularRepos(lang)
       .then(repos => {
-        this.setState(() => ({
+        this.setState({
           repos
-        }))
+        })
       });
   }
 

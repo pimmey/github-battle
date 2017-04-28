@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const styles = {
@@ -8,7 +8,7 @@ const styles = {
   }
 };
 
-export default class Loading extends React.Component {
+export default class Loading extends Component {
   constructor(props) {
     super(props);
 
