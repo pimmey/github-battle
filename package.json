@@ -16,7 +16,7 @@
       "react"
     ]
   },
-  "author": "",
+  "author": "Yegor Borisenco <pimmey@pimmey.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.1",
