@@ -41,10 +41,12 @@ export default class extends Component {
   }
 
   render() {
-    const error = this.state.error;
-    const winner = this.state.winner;
-    const loser = this.state.loser;
-    const loading = this.state.loading;
+    const {
+      error,
+      winner,
+      loser,
+      loading
+    } = this.state;
 
     if (loading === true) {
       return <Loading />
